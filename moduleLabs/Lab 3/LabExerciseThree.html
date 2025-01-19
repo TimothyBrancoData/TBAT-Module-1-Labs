@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            Module 1 Lab Exercise 3
+        </title>
+        <style>
+            body {
+                font-family: sans-serif;
+                margin: 0;
+            }
+
+            .container {
+                display: flex;
+                min-height: 100vh;
+                align-items: stretch;
+            }
+
+            .column {
+                background: #daa520;
+                display:
+                    flex;
+                flex-direction: column;
+                justify-content:
+                    center;
+                align-items: center;
+                flex: 1;
+            }
+            .img-spacing {
+                padding: 20px;
+            }
+            .btn-style {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="column" id="column1">
+                <h1 id="heading1">Goofball</h1>
+                <button class="btn-style" onclick="applyStyle('Goofball')">Change Me!</button>
+                <img class="img-spacing" src="https://www.baldivisvet.com.au/wp-content/uploads/2017/10/cats-cute-cat-licking-paw1920-300x300.jpg" alt="cat_img">
+            </div>
+            <div class="column" id="column2">
+                <h1 id="heading2">Skittles</h1>
+                <button class="btn-style" onclick="applyStyle('Skittles')">Change Me!</button>
+                <img class="img-spacing" src="https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Lory-300x300.jpg" alt="bird_img">
+            </div>
+        </div>
+        <script>
+            let isButtonOneClicked = false
+            let isButtonTwoClicked = false
+
+            function applyStyle(petname) {
+                const headingOne = document.getElementById("heading1");
+                const headingTwo = document.getElementById("heading2");
+                const columeOne = document.getElementById("column1");
+                const columeTwo = document.getElementById("column2");
+
+                // switch(isButtonOneClicked) {
+                //     case petname === "Goofball" && isButtonOneClicked === false:
+                //         columeOne.style.backgroundColor = "#da4f20";
+                //         headingOne.innerText = "Cat";
+                //         isButtonOneClicked = true
+                //         break;
+                //     case petname === "Goofball" && isButtonOneClicked === true:
+                //         columeOne.style.backgroundColor = "#daa520";
+                //         headingOne.innerText = "Goofball";
+                //         isButtonOneClicked = false
+                //         break;
+                //     case petname === "Skittles" && isButtonOneClicked === false:
+                //         columeTwo.style.backgroundColor = "#8CBA80";
+                //         headingTwo.innerText = "Bird";
+                //         isButtonOneClicked = true;
+                //         break;
+                //     case petname === "Skittles" && isButtonOneClicked === true:
+                //         columeTwo.style.backgroundColor = "#daa520";
+                //         headingTwo.innerText = "Skittles";
+                //         isButtonOneClicked = false
+                //         break;
+                //     default:
+                //         console.log("Invalid input")
+                // }
+
+                if (petname === "Goofball" && isButtonOneClicked === false) {
+                    columeOne.style.backgroundColor = "#da4f20";
+                    headingOne.innerText = "Cat";
+                    isButtonOneClicked = true
+                } 
+                else if (petname === "Goofball" && isButtonOneClicked === true) {
+                    columeOne.style.backgroundColor = "#daa520";
+                    headingOne.innerText = "Goofball";
+                    isButtonOneClicked = false
+                }
+        
+                if (petname === "Skittles" && isButtonTwoClicked === false) {
+                    columeTwo.style.backgroundColor = "#8CBA80";
+                    headingTwo.innerText = "Bird";
+                    isButtonTwoClicked = true;
+
+                } 
+                else if (petname === "Skittles" && isButtonTwoClicked === true) {
+                    columeTwo.style.backgroundColor = "#daa520";
+                    headingTwo.innerText = "Skittles";
+                    isButtonTwoClicked = false
+                }
+            }
+        </script>
+    </body>
+</html>
+
+<!--
+
+Module 1 Lab Exercise 3
+
+- Add an image to each column DONE
+- Add a ‘Change Me’ button under each heading DONE
+- Style your buttons with CSS DONE
+- Add a script tag with two JS functions, one for each button DONE
+- Clicking each button should change the background colour and the heading text for that column. DONE
+- Try including an array of colours
+
+>> 
