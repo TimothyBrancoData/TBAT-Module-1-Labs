@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>page title</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        html {
+            height: 100%;
+        }
+
+        body {
+            font-family: sans-serif;
+            height: inherit;
+        }
+
+        header {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            /* height: 5%; */
+        }
+
+        nav {
+            background-color: gold;
+            width: 100%;
+            height: 100px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        section {
+            height: 90%;
+        /* disp */
+        }
+
+        .container {
+            display: flex;
+            height: inherit;
+        }
+
+        .user-input-spacing > div {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        article {
+            background-color: whitesmoke;
+            flex: 2;
+            padding: 20px;
+        }
+
+        aside {
+            flex: 1;
+        }
+
+        footer {
+            height: 5%;
+            background: #222;
+            color: #eee;
+            text-align: center;
+            padding: 0.5em;
+            font-size: 0.9em;
+        }
+    </style>
+  </head>
+  <body>
+    <header><h1 id="header">Header</h1></header>
+    <section>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Articles</a></li>
+        </ul>
+      </nav>
+      <div class="container">
+        <section class="article-content">
+          <article>
+                <div style="display: flex;">
+                    <img style="width: 300px;" src="https://m.media-amazon.com/images/M/MV5BNWQzYWE5MjQtYmE0MS00MDc0LTlmZTYtMDBiMjBmNmUxYjdlXkEyXkFqcGc@._V1_.jpg" alt="one-shot-portrait">
+                    <div style="margin-left: 20px;">
+                        <h2>OneShot</h2>
+                        <p>A indie puzzle game, which you play as Niko waking up in the world of the Refuge. You'll help out many people through your journey and make new friends along the way.</p>
+                        <a href="https://store.steampowered.com/app/420530/OneShot/">More information...</a>
+                    </div>
+                </div>
+            </article>
+            <article style="display: flex; flex-direction: column;">
+                <form class="user-input-spacing" style="display: flex; flex-direction: column;" action="">
+                    <div>
+                        <label for="">First Name</label>
+                        <input type="text" name="" id="firstname" placeholder="">
+                    </div>
+                    <div>
+                        <label for="">Last Name</label>
+                        <input type="text" name="" id="lastname" placeholder="">
+                    </div>
+                    <div>
+                        <label for="">Vegan?</label>
+                        <input type="checkbox" name="" id="vegan-option">
+                    </div>
+                    <div>
+                        <button onclick="orderNow()">Order Now</button>
+                    </div>
+                </form>
+            </article>  
+        </section class="article-content">
+        <aside id="aside">
+          <h2>Related</h2>
+          <ul>
+            <li><a href="#">Article 1</a></li>
+            <li><a href="#">Article 2</a></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+    <footer>
+      <p>@copyright 2050 by nobody. all rights reversed</p>
+    </footer>
+    <script>
+        let referrence = Math.ceil(Math.random(100)*1000); 
+
+        function orderNow() {
+            alert("Order Up! for Order: " + referrence)
+        }
+        document.getElementById("header").innerText = "Hello JavaScript";
+        document.getElementById("aside").style.backgroundColor = "green";
+
+        const books = ["sapiens", "where is the green sheep", "harry potter and the goblet of fire", "song of ice and fire"];
+
+        // console.log('this is a Message')
+        // console.info('this is info')
+        // console.warn('this is a warning')
+        // console.error('this is an error');
+    </script>
+  </body>
+</html>

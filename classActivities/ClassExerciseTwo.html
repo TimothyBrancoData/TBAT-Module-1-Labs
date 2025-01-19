@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Example Three</title>
+    <meta charset="utf-8" />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      html {
+        height: 100%;
+      }
+
+      body {
+        font-family: sans-serif;
+        height: inherit;
+      }
+
+      header {
+        background-color: blue;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .form-books {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Book Store Library</header>
+    <main>
+        <form class="form-books" action="">
+            <label for="">Book Title</label>
+            <input type="text" id="book-title"><br>
+        </form>
+        <button style="margin: 20px;" onclick="bookSearch()">Search Books</button>
+    </main>
+  </body>
+  <script>
+      // USER NEEDS TO INPUT THEIR BOOK CHOICE *REQUIRED
+    
+      // USER CLICKS A BUTTON TO SEARCH FOR THE BOOK *REQUIRED
+    
+      // IF THE BOOK IS NOT FOUND, DISPLAY A MESSAGE SAYING "BOOK NOT FOUND" *REQUIRED
+              
+      // IF THE BOOK IS FOUND, DISPLAY A MESSAGE SAYING "BOOK FOUND" WITH FULL BOOK NAME *** OPTIONAL
+
+      const books = [
+        "sapiens", 
+        "where is the green sheep", 
+        "harry potter and the goblet of fire", 
+        "song of ice and fire"
+    ];
+
+    function bookSearch() {
+        const bookInput = document.getElementById("book-title").value;
+
+        let isBookFound = false;
+        isBookFound = books.includes(bookInput);
+
+        if (isBookFound === true) {
+            console.log("Found Book: " + bookInput)
+        }
+        else {
+            console.log("Book not found or book was entered incorrectly!")
+        }
+    }
+  </script>
+</html>
