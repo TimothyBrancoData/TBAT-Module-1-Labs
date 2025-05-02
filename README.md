@@ -1,4 +1,4 @@
-## TBAT-Module-1-Labs
+## TBAT Module 1 Labs
 
 **Outline:** Lab 1 Exercises for Module 1.
 
